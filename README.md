@@ -28,8 +28,7 @@ modules: admin:1.0 clique:1.0 debug:1.0 eth:1.0 miner:1.0 net:1.0 personal:1.0 r
 ------------------------------------------
 4) Connect to the SustainabilityChain: after this new console prompt > type (or copy paste everything after the >
 
-> admin.addPeer("enode://33b2814ac9d9e5ee6c9d4e0ded8e74505387a245b642a2cb2617c3e4e57b18527806e1d74d7d995ee
-ff1f520a4f0f098a6a36b509a599cdd0558d20cc0a26c3d@52.59.201.140:30303")
+> admin.addPeer("enode://33b2814ac9d9e5ee6c9d4e0ded8e74505387a245b642a2cb2617c3e4e57b18527806e1d74d7d995eeff1f520a4f0f098a6a36b509a599cdd0558d20cc0a26c3d@52.59.201.140:30303")
 ------------------------------------------
 5)start minining
 >miner.start()
