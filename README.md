@@ -30,6 +30,10 @@ modules: admin:1.0 clique:1.0 debug:1.0 eth:1.0 miner:1.0 net:1.0 personal:1.0 r
 
 > admin.addPeer("enode://df764111e7dcf81e617ceb7d9aea3836edfe5a5392dbce8d88bc70cfce2472de376818181e799d4c9d78f758aa35827c642da387ccc33fa064d03a3d55300139@172.26.3.66:30303")
 
+admin.addPeer("enode://df764111e7dcf81e617ceb7d9aea3836edfe5a5392dbce8d88bc70cfce2472de376818181e799d4c9d78f758aa35827c642da387ccc33fa064d03a3d55300139@52.59.201.140:30303")
+
+
+
 ------------------------------------------
 5)start minining
 >miner.start()
