@@ -14,10 +14,18 @@ sudo add-apt-repository -y ppa:ethereum/ethereum
 sudo apt-get update
 
 sudo apt-get install -y ethereum
+
+git clone https://github.com/ScenicSwisscoast/SustainabiltyChain
 ------------------------------------------
-3) fire up Ethereum connecting to the SustainabilityChain type in your console
+3) initialise geth and fire up a node
 
 sudo geth --datadir ./myDataDir --networkid 19720502  console 2>> myEth2.log
+
+or
+
+geth --port 30304 --rpc --rpcaddr 127.0.0.1 --rpcport 8101 --rpccorsdomain http://127.0.0.1:8000  --datadir myDataDir --networkid 19720502  init ./myGenesis.json console 2>> myEth2.log  
+
+geth --port 30304 --rpc --rpcaddr 127.0.0.1 --rpcport 8101 --rpccorsdomain http://127.0.0.1:8000  --datadir myDataDir --networkid 19720502 --bootnodes="enode://7c2905988a4de8198b9e88901f06afb54bc983b9e671c867bf6dd96a2f1a83b3809515effc951af524205a316474f63f367f4a44c9e43eecd154ed7589516a84@52.59.201.140:30304" 
 
 The output should look a bit like this:
 
@@ -31,24 +39,19 @@ modules: admin:1.0 clique:1.0 debug:1.0 eth:1.0 miner:1.0 net:1.0 personal:1.0 r
 >
 
 ------------------------------------------
-4) Connect to the SustainabilityChain: after these 2 new console prompts > type (or copy paste everything after the >
+4) Check if you are connected to the SustainabilityChain by typing admin.peers
+you should get something like this
 
->admin.addPeer("enode://df764111e7dcf81e617ceb7d9aea3836edfe5a5392dbce8d88bc70cfce2472de376818181e799d4c9d78f758aa35827c642da387ccc33fa064d03a3d55300139@172.26.3.66:30303")
 
->admin.addPeer("enode://df764111e7dcf81e617ceb7d9aea3836edfe5a5392dbce8d88bc70cfce2472de376818181e799d4c9d78f758aa35827c642da387ccc33fa064d03a3d55300139@52.59.201.140:30303")
+to make sure you are syncing type 
+>eth.syncing 
 
-enode://8013e27087d9aab5caa4ccca74a9e8e2656749f2a66bc05b20e2151c57f98c1dca7d8ee618ef5c4fdf3a8e2ee80f1de3bb7709907932c75418cbe94af0545334@172.26.3.66:30301
+you should get a 
+true
+as a response
 
-enode://8013e27087d9aab5caa4ccca74a9e8e2656749f2a66bc05b20e2151c57f98c1dca7d8ee618ef5c4fdf3a8e2ee80f1de3bb7709907932c75418cbe94af0545334@52.59.201.140:30301
 
-enode://f0b5c98ab443491087c1be4e5e45f583d29130216fd85b0d93f13fdeb3b5f6325e85f8414630332cb9491a4d18b6a37e530f19d0b4a183f50fa5d11c7ff23434@52.59.201.140:30303
-
-"enode://1589e6da5760d6d79590562eadc89c0dbe9a27861a7255ecf12852c75c86bb8f7233779d291f3bfcf905d9aeeb7e05dcbe8c1440f6bbcbda0cdfdc57b1e1751c@52.59.201.140:30303"
-
-type 
->eth.syncing
-
-online after syncing stopped go to step 5)
+when you are sure that you have synced the blockchain you can go to step 5)
 
 ------------------------------------------
 5)start minining
