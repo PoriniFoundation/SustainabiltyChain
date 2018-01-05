@@ -61,6 +61,9 @@ when you are sure that you have synced the blockchain you can go to step 5)
 ------------------------------------------
 5)start minining
 >miner.start()
+check balances from time to time 
+eth.getBalance(eth.coinbase)/10E18
+
 ------------------------------------------
 6) check connections type net after the >
 >net
@@ -75,6 +78,26 @@ The out put should look a bit like this
   getVersion: function(callback)
 }
 
+check if bootnode is connected
+>admin.peers
+
+result should show something like this that includes the bootsnode
+[{
+    caps: ["eth/63"],
+    id: "f8079ec77a20affd47d0739b80b599654d4956e1fab2332a4868ea68abdf42c948fb9d0ebe28c5c2ab63ca6a65f945c37cf3acb520125e06489c9d6a06f1fc4d",
+    name: "Geth/v1.7.3-stable-4bb3c89d/linux-amd64/go1.9",
+    network: {
+      localAddress: "192.168.1.112:33612",
+      remoteAddress: "52.59.201.140:30304"
+    },
+    protocols: {
+      eth: {
+        difficulty: 91489639,
+        head: "0x13da4f44cab80151071944d331389650feb4a6fe0e363a076774eafc81551fd3",
+        version: 63
+      }
+    }
+}]
 
 
 
