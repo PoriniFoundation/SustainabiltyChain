@@ -1,7 +1,14 @@
 # SustainabiltyChain
 #Tutorial to run a node
+#whenever it says FILL_IN_BOOTNODE_INFO replace this with everything below inclunding the " at the beginnin and the end
 
+"enode://f8079ec77a20affd47d0739b80b599654d4956e1fab2332a4868ea68abdf42c948fb9d0ebe28c5c2ab63ca6a65f945c37cf3acb520125e06489c9d6a06f1fc4d@52.59.201.140:30304"
+
+
+
+------------------------------------------
 1) If you are on Windows 10 Install Linux Ubuntu using https://docs.microsoft.com/en-us/windows/wsl/install-win10
+
 ------------------------------------------
 2) Install Ethereum on your Ubuntu. In your Ubuntu-Shell type each of these lines
 
@@ -16,13 +23,15 @@ sudo apt-get update
 sudo apt-get install -y ethereum
 
 git clone https://github.com/ScenicSwisscoast/SustainabiltyChain
+
+
 ------------------------------------------
-3) initialise geth and fire up a node with bootnote "enode://f8079ec77a20affd47d0739b80b599654d4956e1fab2332a4868ea68abdf42c948fb9d0ebe28c5c2ab63ca6a65f945c37cf3acb520125e06489c9d6a06f1fc4d@52.59.201.140:30304"
+3) initialise geth and fire up a node with bootnote info
 
 sudo geth --port 30304 --rpc --rpcaddr 127.0.0.1 --rpcport 8101 --rpccorsdomain http://127.0.0.1:8000  --datadir myDataDir --networkid 19720502  init ./SustainabiltyChain/files/myGenesis.json console 2>> myEth2.log  
 
 
-sudo geth --port 30304 --rpc --rpcaddr 127.0.0.1 --rpcport 8101 --rpccorsdomain http://127.0.0.1:8000  --datadir myDataDir --networkid 19720502 --bootnodes="enode://7c2905988a4de8198b9e88901f06afb54bc983b9e671c867bf6dd96a2f1a83b3809515effc951af524205a316474f63f367f4a44c9e43eecd154ed7589516a84@52.59.201.140:30304" console 2>> myEth2.log
+sudo geth --port 30304 --rpc --rpcaddr 127.0.0.1 --rpcport 8101 --rpccorsdomain http://127.0.0.1:8000  --datadir myDataDir --networkid 19720502 --bootnodes=FILL_IN_BOOTNODE_INFO console 2>> myEth2.log
 
 
 
@@ -39,13 +48,17 @@ modules: admin:1.0 clique:1.0 debug:1.0 eth:1.0 miner:1.0 net:1.0 personal:1.0 r
 >
 
 make sure to connect MANUALLY ADD PEER
->admin.addPeer("enode://7c2905988a4de8198b9e88901f06afb54bc983b9e671c867bf6dd96a2f1a83b3809515effc951af524205a316474f63f367f4a44c9e43eecd154ed7589516a84@52.59.201.140:30304")
+>admin.addPeer(FILL_IN_BOOTNODE_INFO)
 
 
 
 ------------------------------------------
 4) Check if you are connected to the SustainabilityChain by typing admin.peers
-you should get something like this
+and somewhere you should see your BOOTNODE_INFO this whole section 4) is also featured in more detail in appendix a)
+
+type in
+>net
+you should see at least one node connected
 
 
 to make sure you are syncing type 
@@ -58,14 +71,19 @@ as a response
 
 when you are sure that you have synced the blockchain you can go to step 5)
 
+
 ------------------------------------------
 5)start minining
+
+create an account by typing
+personal.newAccount("Password")
+
 >miner.start()
 check balances from time to time 
 eth.getBalance(eth.coinbase)/10E18
 
 ------------------------------------------
-6) check connections type net after the >
+Appendix A) check connections type net after the >
 >net
 
 The out put should look a bit like this 
