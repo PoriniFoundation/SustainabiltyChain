@@ -2,7 +2,7 @@
 #Tutorial to run a node
 #whenever it says FILL_IN_BOOTNODE_INFO replace this with everything below inclunding the " at the beginnin and the end
 
-"enode://f8079ec77a20affd47d0739b80b599654d4956e1fab2332a4868ea68abdf42c948fb9d0ebe28c5c2ab63ca6a65f945c37cf3acb520125e06489c9d6a06f1fc4d@52.59.201.140:30304"
+"enode://bc44b9322ad19113d6a4d69121c7dc91e95e2e7b9e85dae871da03dcac76a06ddd7cf5dba13d15d882596aeddcf6bf667ecf3914204b81d6b9fb9aed115f7e5e@52.59.201.140:30304"
 
 
 
