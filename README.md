@@ -4,7 +4,8 @@
 
 "enode://bc44b9322ad19113d6a4d69121c7dc91e95e2e7b9e85dae871da03dcac76a06ddd7cf5dba13d15d882596aeddcf6bf667ecf3914204b81d6b9fb9aed115f7e5e@52.59.201.140:30304"
 
-
+REAL DEAL USE THIS
+"enode://0fe08c0fd6643f54bfcb6987e9fa2201bf22bbabe846b565a222e85d1c93826ece52b77f30860b73838e32ac9e79946df521b2228ffe10eb38748eda1451880c@52.59.201.140:30304"
 
 ------------------------------------------
 1) If you are on Windows 10 Install Linux Ubuntu using https://docs.microsoft.com/en-us/windows/wsl/install-win10
