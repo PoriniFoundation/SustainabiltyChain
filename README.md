@@ -66,10 +66,11 @@ to make sure you are syncing type
 >eth.syncing 
 
 you should get a 
-true
+false
 as a response
 
 
+that means it is synced already and is not syncing anymore, that is a good thing, that is what you want
 when you are sure that you have synced the blockchain you can go to step 5)
 
 
