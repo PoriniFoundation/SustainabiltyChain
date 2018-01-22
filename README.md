@@ -23,7 +23,7 @@ sudo apt-get update
 
 sudo apt-get install -y ethereum
 
-git clone https://github.com/ScenicSwisscoast/SustainabiltyChain
+git clone git@github.com:ScenicSwisscoast/SustainabiltyChain
 
 
 ------------------------------------------
