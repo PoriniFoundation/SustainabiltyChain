@@ -24,7 +24,7 @@ git clone https://github.com/ScenicSwisscoast/SustainabiltyChain
 ------------------------------------------
 3) initialise geth and fire up a node with bootnote info
 
-sudo geth --port 30304 --rpc --rpcaddr 127.0.0.1 --rpcport 8101 --rpccorsdomain http://127.0.0.1:8000  --datadir myDataDir --networkid 19720502  init ./SustainabiltyChain/files/myGenesis72.json console 2>> myEth2.log  
+sudo geth --port 30304 --rpc --rpcaddr 127.0.0.1 --rpcport 8101 --rpccorsdomain http://127.0.0.1:8000  --datadir myDataDir --networkid 19720502  init ./SustainabiltyChain/files/myGenesis72.json console 2>> myEth2Start.log  
 
 
 
