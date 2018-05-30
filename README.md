@@ -35,7 +35,16 @@ sudo geth --port 30304 --rpc --rpcaddr "0.0.0.0" --rpcport 8101 --rpccorsdomain 
 "enode://0fe08c0fd6643f54bfcb6987e9fa2201bf22bbabe846b565a222e85d1c93826ece52b77f30860b73838e32ac9e79946df521b2228ffe10eb38748eda1451880c@52.59.201.140:30304"
 console 2>> myEth3.log
 
-
+----------
+Note on the side: Instead of adding --bootnodes you an also put them in a file in folder:
+myDataDir/geth/static-nodes.json
+and the file looks like this comma separated
+[
+"enode://2d29a115b101a7c439c1d57fca0a6a16981b8315cfebc5266ad662644b12d03e2abfe66b10a850e720ddb915eb370ee29ea9c5defb27812aa14de2d56d108607@13.211.93.173:30304",
+"enode://0fe08c0fd6643f54bfcb6987e9fa2201bf22bbabe846b565a222e85d1c93826ece52b77f30860b73838e32ac9e79946df521b2228ffe10eb38748eda1451880c@52.59.201.140:30304"
+]
+see here https://github.com/ethereum/go-ethereum/wiki/Connecting-to-the-network#static-nodes
+---------------
 
 
 The output should look a bit like this:
