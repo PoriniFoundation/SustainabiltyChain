@@ -7,13 +7,22 @@
         "difficultyBoundDivisor": "0x800",
         "blockReward": "0x29A2241AF62C0000",
         "registrar": "0x81a4b044831c4f12ba601adb9274516939e9b8a2",
-        "homesteadTransition": 0,
-        "eip150Transition": "0x7fffffffffffffff",
-        "eip155Transition": 0,
-        "eip160Transition": "0x7fffffffffffffff",
-        "eip161abcTransition": "0x7fffffffffffffff",
-        "eip161dTransition": "0x7fffffffffffffff",
-        "eip98Transition": 9223372036854775807
+        "homesteadTransition": "0x0",
+        "eip150Transition": "0x0",
+        "eip160Transition": "0x0",
+        "eip161abcTransition": "0x0",
+        "eip161dTransition": "0x0",
+        "eip649Reward": "0x29A2241AF62C0000",
+        "eip100bTransition": "0x0",
+        "eip649Transition": "0x0",
+        "maxCodeSize": 24576,
+        "maxCodeSizeTransition": "0x0",
+        "eip98Transition": "0xffffffffffffffff",
+        "eip140Transition": "0x0",
+        "eip211Transition": "0x0",
+        "eip214Transition": "0x0",
+        "eip155Transition": "0x0",
+        "eip658Transition": "0x0"
       }
     }
   },
@@ -23,8 +32,14 @@
     "minGasLimit": "0x0",
     "networkID": 19720502,
     "gasLimitBoundDivisor": "0x400",
-    "eip98Transition": 9223372036854775807,
-    "_eip98Transition": "0x7fffffffffffffff"
+    "maxCodeSize": 24576,
+    "maxCodeSizeTransition": "0x0",
+    "eip98Transition": "0xffffffffffffffff",
+    "eip140Transition": "0x0",
+    "eip211Transition": "0x0",
+    "eip214Transition": "0x0",
+    "eip155Transition": "0x0",
+    "eip658Transition": "0x0"
   },
   "genesis": {
     "seal": {
@@ -33,7 +48,7 @@
         "mixHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
       }
     },
-    "difficulty": "10",
+    "difficulty": "400",
     "_author": "0x0000000000000000000000000000000000000000",
     "extraData": "0x",
     "timestamp": "0x0",
